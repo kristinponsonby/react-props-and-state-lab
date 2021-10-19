@@ -15,6 +15,10 @@ class App extends React.Component {
     }
   }
 
+  onChangeType = (event) => {
+    this.setState({type: event.target.value})
+  }
+
   render() {
     return (
       <div className="ui container">
