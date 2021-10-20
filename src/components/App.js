@@ -19,14 +19,17 @@ class App extends React.Component {
     this.setState({type: event.target.value})
   }
 
-  onFindPetsClick = (event) => {
-    event.preventDefault();
+  onFindPetsClick = () => {
     fetch("/api/pets")
       .then(res => res.json())
       .then(
         (result) => {
-          this.setState({
-  }
+          this.setState(
+            {pets:result}
+             )}
+            )
+          }
+      
     
 
   render() {
